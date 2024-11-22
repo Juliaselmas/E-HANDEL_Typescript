@@ -16,28 +16,25 @@ app.use(express.json());
 
 //"/items"?
 app.get("/", async (req, res) => {
-  const url = `${baseUrl}`;
-  const response = await fetch("http://localhost:5006/items");
-
-  if (response.ok) {
+  try {
+    const response = await fetch(`${baseUrl}`);
+    if (!response.ok) throw new Error("Failed to fetch items");
     const result = await response.json();
     res.status(200).json({ success: true, data: result });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
   }
 });
 
 app.get("/:id", async (req, res) => {
-  /*
-     const param = req.params.id;
-     const url = `${baseUrl}/${param}`;
-     const response = await fetch(url);
-     const response = await fetch(`http://localhost:5006/items/${param}`);
-    */
-  const param = req.params.id;
-  const response = await fetch("http://localhost:5006/items");
-
-  if (response.ok) {
+  try {
+    const param = req.params.id;
+    const response = await fetch(`${baseUrl}/${param}`);
+    if (!response.ok) throw new Error("Failed to fetch item");
     const result = await response.json();
     res.status(200).json({ success: true, data: result });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
   }
 });
 
