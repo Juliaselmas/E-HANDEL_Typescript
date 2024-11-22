@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "title": "ABC",
+      "price": 199,
+      "description": "Lorem ipsum",
+      "image": "url",
+      "quantity": 5
+    },
+    {
+      "id": "2",
+      "title": "DEF",
+      "price": 199,
+      "description": "Lorem ipsum",
+      "image": "url",
+      "quantity": 5
+    },
+    {
+      "id": "23c9",
+      "title": "HGI",
+      "price": 199,
+      "description": "Lorem ipsum",
+      "image": "url",
+      "quantity": 4
+    }
+  ]
+}
