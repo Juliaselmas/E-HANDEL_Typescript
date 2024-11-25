@@ -1,4 +1,4 @@
-import { ItemsPage } from "../Pages/ItemsPages";
+import { ItemsPage } from "../Pages/ItemsPage";
 
 export const MainLayout = () => {
     return (

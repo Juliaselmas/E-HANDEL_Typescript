@@ -14,15 +14,18 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-//"/items"?
-app.get("/", async (req, res) => {
+app.get("/items", async (req, res) => {
+  //console.log("BASE_URL in backend:", baseUrl);
   try {
-    const response = await fetch(`${baseUrl}`);
-    if (!response.ok) throw new Error("Failed to fetch items");
-    const result = await response.json();
-    res.status(200).json({ success: true, data: result });
-  } catch (err) {
-    res.status(500).json({ success: false, message: err.message });
+    const response = await fetch(`${baseUrl}`); // BASE_URL ska vara http://localhost:5006/items
+    if (!response.ok)
+      throw new Error(`Failed to fetch items: ${response.statusText}`);
+
+    const data = await response.json();
+    res.status(200).json({ success: true, data });
+  } catch (error) {
+    console.error("Error in /items:", error.message);
+    res.status(500).json({ success: false, message: error.message });
   }
 });
 
@@ -55,3 +58,42 @@ app.post("/", async (req, res) => {
 
 //startar upp server & lyssnar på anrop
 app.listen(PORT, () => console.log(`Server is running on port: ${PORT}`));
+
+/*
+app.get("/items", async (req, res) => {
+  console.log("BASE URL is:", baseUrl);
+  try {
+    const response = await fetch(`${baseUrl}`);
+    if (!response.ok) {
+      console.error(
+        `Error fetching data from ${baseUrl}:`,
+        response.statusText
+      );
+      throw new Error("Failed to fetch items from JSON server");
+    }
+    const result = await response.json();
+    res.status(200).json({ success: true, data: result });
+  } catch (err) {
+    console.error("Server error:", err.message);
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+ */
+
+/*FELMEDDELANDE??
+app.get("/", (req, res) => {
+  res.status(200).json({ success: true, message: "Welcome to the homepage!" });
+});
+
+app.get("/items", async (req, res) => {
+  try {
+    const response = await fetch(`${baseUrl}`);
+    if (!response.ok) throw new Error("Failed to fetch items from JSON server");
+    const result = await response.json();
+    res.status(200).json({ success: true, data: result });
+  } catch (err) {
+    console.error("Error fetching items:", err.message);
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+*/
