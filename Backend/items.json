@@ -5,7 +5,7 @@
       "title": "ABC",
       "price": 199,
       "description": "Lorem ipsum",
-      "image": "url",
+      "image": "/Users/julia/Desktop/KOD/JAVASCRIPT4/E-HANDEL/Frontend/images/xmas-cookies.jpg",
       "quantity": 5
     },
     {
@@ -13,7 +13,7 @@
       "title": "DEF",
       "price": 199,
       "description": "Lorem ipsum",
-      "image": "url",
+      "image": "/Users/julia/Desktop/KOD/JAVASCRIPT4/E-HANDEL/Frontend/images/xmas-cookies.jpg",
       "quantity": 5
     },
     {
@@ -21,7 +21,7 @@
       "title": "HGI",
       "price": 199,
       "description": "Lorem ipsum",
-      "image": "url",
+      "image": "/Users/julia/Desktop/KOD/JAVASCRIPT4/E-HANDEL/Frontend/images/xmas-cookies.jpg",
       "quantity": 4
     }
   ]
