@@ -7,8 +7,11 @@ export const ItemCard = ({ item }: {item: Item}) => {
         <section>
             <div className={styles.itemCard}>
                 <img src={item.image} alt={item.title}/>
+                <div className={styles.textBox}>
                 <h3>{item.title}</h3>
                 <h5>{item.price}</h5>
+                </div>
+                
             </div>
         </section>
     )

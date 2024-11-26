@@ -1,0 +1,10 @@
+.header {
+width: 100%;
+padding: 10px;
+background-color: rgb(93, 122, 94);
+display: flex;
+}
+
+h2 {
+    font-size: 2rem;
+}

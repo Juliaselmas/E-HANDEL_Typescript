@@ -1,0 +1,8 @@
+.gridList {
+    background-color: rgb(61, 95, 74);
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    width: 85%;
+    flex-wrap: wrap;
+}

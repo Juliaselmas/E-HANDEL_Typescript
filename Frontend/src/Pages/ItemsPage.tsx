@@ -24,9 +24,9 @@ export const ItemsPage = () => {
 return (
     <>
     <h1>ItemsPage</h1>
-    <section>
+   
         <GridList items={items} />
-    </section>
+    
     </>
 );
 };

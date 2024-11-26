@@ -5,24 +5,45 @@
       "title": "ABC",
       "price": 199,
       "description": "Lorem ipsum",
-      "image": "/Users/julia/Desktop/KOD/JAVASCRIPT4/E-HANDEL/Frontend/images/xmas-cookies.jpg",
+      "image": "https://images.unsplash.com/photo-1607919564479-c2e00f3b14a9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGRpeSUyMGNocmlzdG1hc3xlbnwwfHwwfHx8MA%3D%3D",
       "quantity": 5
     },
     {
       "id": "2",
       "title": "DEF",
-      "price": 199,
+      "price": 299,
       "description": "Lorem ipsum",
-      "image": "/Users/julia/Desktop/KOD/JAVASCRIPT4/E-HANDEL/Frontend/images/xmas-cookies.jpg",
+      "image": "https://images.unsplash.com/photo-1607920592831-f68bbee49939?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGl5JTIwY2hyaXN0bWFzfGVufDB8fDB8fHww",
       "quantity": 5
     },
     {
-      "id": "23c9",
+      "id": "3",
       "title": "HGI",
       "price": 199,
       "description": "Lorem ipsum",
-      "image": "/Users/julia/Desktop/KOD/JAVASCRIPT4/E-HANDEL/Frontend/images/xmas-cookies.jpg",
+      "image": "https://images.unsplash.com/photo-1692884020981-ff239e22cd09?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fGRpeSUyMGNocmlzdG1hc3xlbnwwfHwwfHx8MA%3D%3D",
       "quantity": 4
+    },{
+      "id": "4",
+      "title": "JKL",
+      "price": 99,
+      "description": "Lorem ipsum",
+      "image": "https://images.unsplash.com/photo-1692884020981-ff239e22cd09?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fGRpeSUyMGNocmlzdG1hc3xlbnwwfHwwfHx8MA%3D%3D",
+      "quantity": 2
+    },{
+      "id": "5",
+      "title": "MNO",
+      "price": 299,
+      "description": "Lorem ipsum",
+      "image": "https://images.unsplash.com/photo-1607920592831-f68bbee49939?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGl5JTIwY2hyaXN0bWFzfGVufDB8fDB8fHww",
+      "quantity": 6
+    },{
+      "id": "6",
+      "title": "PQR",
+      "price": 49,
+      "description": "Lorem ipsum",
+      "image": "https://images.unsplash.com/photo-1607919564479-c2e00f3b14a9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGRpeSUyMGNocmlzdG1hc3xlbnwwfHwwfHx8MA%3D%3D",
+      "quantity": 1
     }
   ]
 }
