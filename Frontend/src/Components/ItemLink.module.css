@@ -1,0 +1,9 @@
+.itemLink {
+    text-decoration: none; /* Ta bort understrykning */
+    color: inherit; /* Ärva textfärg */
+    display: block; /* Gör länken till en blocknivå-element */
+  }
+  
+  .itemLink:hover {
+    opacity: 0.9; /* Effekt vid hover */
+  }

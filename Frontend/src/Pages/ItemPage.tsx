@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Item } from "../Models/Item";
-import { LoadItems } from "../Utilities/LoadItems";
+import { ItemDetailsModel } from "../Models/ItemDetailsModel";
+import { LoadItemDetails } from "../Utilities/LoadItemDetails";
+import { ItemDetailsCard } from "../Components/ItemDetailsCard";
 
 export const ItemPage = () => {
-  const { id } = useParams<{ id: string }>(); // Hämtar id från URL:en
-  const [item, setItem] = useState<Item | null>(null);
+  const { id } = useParams<{ id: string }>();
+  const [item, setItem] = useState<ItemDetailsModel | null>(null);
 
   useEffect(() => {
     if (id) {
-      fetchItem(id);
+      loadItemDetails(id);
     }
   }, [id]);
 
-  const fetchItem = async (itemId: string) => {
-    const items = await LoadItems(`/items`);
-    const selectedItem = items.find((item) => item.id === Number(itemId));
-    setItem(selectedItem || null);
+  const loadItemDetails = async (itemId: string) => {
+    const details = await LoadItemDetails(itemId);
+    setItem(details);
   };
 
   if (!item) {
@@ -25,10 +25,7 @@ export const ItemPage = () => {
 
   return (
     <>
-      <h1>{item.title}</h1>
-      {/*<p>{item.description}</p>*/}
-      <p>Price: {item.price} SEK</p>
-      <img src={item.image} alt={item.title} />
+      <ItemDetailsCard key={item.id} item={item} />
     </>
   );
 };

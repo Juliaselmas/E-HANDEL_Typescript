@@ -15,7 +15,6 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/items", async (req, res) => {
-  //console.log("BASE_URL in backend:", baseUrl);
   try {
     const response = await fetch(`${baseUrl}`); // BASE_URL ska vara http://localhost:5006/items
     if (!response.ok)
@@ -29,15 +28,24 @@ app.get("/items", async (req, res) => {
   }
 });
 
-app.get("/:id", async (req, res) => {
+app.get("/items/:id", async (req, res) => {
   try {
-    const param = req.params.id;
-    const response = await fetch(`${baseUrl}/${param}`);
-    if (!response.ok) throw new Error("Failed to fetch item");
-    const result = await response.json();
-    res.status(200).json({ success: true, data: result });
-  } catch (err) {
-    res.status(500).json({ success: false, message: err.message });
+    const { id } = req.params;
+    const items = await fetch("http://localhost:5006/items").then((res) =>
+      res.json()
+    );
+    const item = items.find((item) => String(item.id) === id);
+
+    if (!item) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Item not found" });
+    }
+
+    res.status(200).json({ success: true, data: item });
+  } catch (error) {
+    console.error("Error in /items/:id:", error.message);
+    res.status(500).json({ success: false, message: error.message });
   }
 });
 

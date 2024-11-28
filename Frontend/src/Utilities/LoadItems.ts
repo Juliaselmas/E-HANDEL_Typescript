@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { Item } from '../Models/Item';
+import { ItemModel } from '../Models/ItemModel';
 
-export const LoadItems = async (endpoint: string): Promise<Item[]> => {
+export const LoadItems = async (endpoint: string): Promise<ItemModel[]> => {
     const baseUrl = import.meta.env.VITE_BASE_URL || "http://localhost:5005";
     const url = `${baseUrl}${endpoint}`;
    

@@ -1,13 +1,13 @@
 //import React from "react";
 import { useEffect, useState } from "react";
-import { Item } from "../Models/Item";
+import { ItemModel } from "../Models/ItemModel";
 import { GridList } from "../Components/GridList";
 import { LoadItems } from "../Utilities/LoadItems";
 //import { useNavigate } from "react-router-dom";
 
 
 export const ItemsPage = () => {
-    const [items, setItems] = useState<Item[]>([]);
+    const [items, setItems] = useState<ItemModel[]>([]);
     //const navigate = useNavigate();
 
 
