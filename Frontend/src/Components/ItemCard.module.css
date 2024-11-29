@@ -1,5 +1,5 @@
 .itemCard {
-    background-color: rgb(199, 224, 199);
+    
     border-radius: 4px;
     padding: 14px 14px 8px 14px;
     margin: 14px;
@@ -9,21 +9,27 @@
 }
 
 .textBox {
-    
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    margin: 0.4rem;
+    padding-left: 0.5rem;
 }
 
 h3 {
     color: rgb(34, 34, 34);
-    font-size: 1.8em;
-    margin: 8px;
+    font-size: 1.5em;
+    margin: 0;
+   
 }
 
 h5 {
     color: rgb(73, 73, 73);
-    margin: 6px;
+    margin: 0;
+    font-size: 1em;
+    font-weight: 200;
+ 
 }
 
 img {

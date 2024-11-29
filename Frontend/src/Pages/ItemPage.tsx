@@ -7,25 +7,33 @@ import { ItemDetailsCard } from "../Components/ItemDetailsCard";
 export const ItemPage = () => {
   const { id } = useParams<{ id: string }>();
   const [item, setItem] = useState<ItemDetailsModel | null>(null);
+  const [backgroundImage, setBackgroundImage] = useState<string>("");
 
   useEffect(() => {
-    if (id) {
-      loadItemDetails(id);
-    }
+    const loadItemDetails = async () => {
+      if (id) {
+        const details = await LoadItemDetails(id);
+        if (details) {
+          setBackgroundImage(details.backgroundImage);
+          setItem(details);
+        }
+      }
+    };
+    loadItemDetails();
   }, [id]);
-
-  const loadItemDetails = async (itemId: string) => {
-    const details = await LoadItemDetails(itemId);
-    setItem(details);
-  };
 
   if (!item) {
     return <p>Loading...</p>;
   }
 
   return (
-    <>
-      <ItemDetailsCard key={item.id} item={item} />
-    </>
+    <div
+      className="itemPage"
+      style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <div className="backgroundImage" />
+      <div className="contentContainer">
+        <ItemDetailsCard key={item.id} item={item} />
+      </div>
+    </div>
   );
 };

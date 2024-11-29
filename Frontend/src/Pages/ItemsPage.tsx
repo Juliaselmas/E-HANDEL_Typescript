@@ -23,7 +23,6 @@ export const ItemsPage = () => {
 
 return (
     <>
-    <h1>ItemsPage</h1>
    
         <GridList items={items} />
     

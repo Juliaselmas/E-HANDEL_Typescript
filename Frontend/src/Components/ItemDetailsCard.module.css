@@ -1,32 +1,50 @@
-.itemCard {
-    background-color: rgb(199, 224, 199);
-    border-radius: 4px;
-    padding: 14px 14px 8px 14px;
-    margin: 14px;
-    /*width: 18rem;*/
-    display: flex;
-    flex-direction: column;
-}
-
-.textBox {
-    
+.itemDetailsCard {
+    max-width: 85rem;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
+    flex-wrap: wrap;
+  }
+  
+  .itemImage {
+    max-width: 35%;
+    height: auto;
+    border-radius: 10px;
+  }
 
-h3 {
-    color: rgb(34, 34, 34);
-    font-size: 1.8em;
-    margin: 8px;
-}
+  .textBox {
+    max-width: 45%;
+    margin: 1.5rem 1rem;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color:rgb(34, 34, 34);
 
-h5 {
-    color: rgb(73, 73, 73);
-    margin: 6px;
-}
-
-img {
-    width: 100%;
-    border-radius: 4px;
-}
+  }
+  
+  .textBox h3 {
+    margin-top: 15px;
+    font-size: 2rem;
+  }
+  
+  .textBox p {
+    margin: 50px 0 10px 0;
+    font-size: 1.1rem;
+    text-align: left;
+    align-self: flex-end;
+  }
+  
+  .textBox h5 {
+    margin-top: 10px;
+    font-size: 1.6rem;
+  }
+  
+  button {
+    align-self: flex-end;
+    background-color: rgb(69, 88, 75);
+  }

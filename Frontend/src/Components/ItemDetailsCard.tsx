@@ -1,19 +1,18 @@
 import { ItemDetailsModel } from "../Models/ItemDetailsModel";
-import styles from "./ItemDetailsCard.module.css"
+import styles from "./ItemDetailsCard.module.css";
 
-export const ItemDetailsCard = ({ item }: {item: ItemDetailsModel}) => {
-    return (
-        <section>
-            <div className={styles.itemCard}>
-                <img src={item.image} alt={item.title}/>
-                <img src={item.backgroundImage} alt={item.title} className={styles.backgroundImage}/>
-                <div className={styles.textBox}>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <h5>{item.price}</h5>
-                </div>
-                
-            </div>
-        </section>
-    )
-}
+export const ItemDetailsCard = ({ item }: { item: ItemDetailsModel }) => {
+  return (
+    <section className={styles.itemDetailsCard}>
+      <img src={item.image} alt={item.title} className={styles.itemImage} />
+      <div className={styles.textBox}>
+        <h3>{item.title}</h3>
+        <h5>{item.price} kr</h5>
+        <p>{item.description}</p>
+        <p>In stock: {item.quantity}</p>
+        <button>Add to cart </button>
+       
+      </div>
+    </section>
+  );
+};
