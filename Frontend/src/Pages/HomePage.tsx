@@ -1,12 +1,10 @@
-import { useNavigate } from 'react-router-dom';
+import HomePageContent from '../Components/HomePageContent';
 
 export const HomePage = () => {
-  const navigate = useNavigate();
-
+  
   return (
     <div>
-      <h1>Welcome to the HomePage</h1>
-      <button onClick={() => navigate('/items')}>Go to Items Page</button>
+      <HomePageContent/>
     </div>
   );
 };
