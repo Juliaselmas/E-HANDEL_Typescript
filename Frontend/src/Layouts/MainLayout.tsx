@@ -6,7 +6,7 @@ export const MainLayout = () => {
     <main>
       <Header />
       <div style={{ padding: '1rem' }}>
-        <Outlet /> {/* Dynamiskt innehåll baserat på nuvarande route */}
+        <Outlet />
       </div>
     </main>
   );

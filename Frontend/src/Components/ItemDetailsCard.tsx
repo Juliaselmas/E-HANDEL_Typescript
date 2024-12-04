@@ -9,8 +9,8 @@ export const ItemDetailsCard = ({ item }: { item: ItemDetailsModel }) => {
         <h3>{item.title}</h3>
         <h5>{item.price} kr</h5>
         <p>{item.description}</p>
-        <p>In stock: {item.quantity}</p>
-        <button>Add to cart </button>
+        <p className={styles.stock}>In stock: {item.quantity}</p>
+        {/*<button>Add to cart </button>*/}
        
       </div>
     </section>

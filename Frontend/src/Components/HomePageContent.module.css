@@ -21,35 +21,41 @@ h3 {
 
 .imageContainer {
     position: relative;
-    display: inline-block;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-bottom: 20px;
 }
 
 .image {
-    width: 100%;
-    display: block;
+    max-width: 30%;
+    margin: 10px;
     transition: opacity 0.3s ease;
+    
   }
   
   .button {
     position: absolute;
-    top: 25%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.223);
-    color: rgb(33, 60, 35);
+    background-color: #efefe68f;
+    border: 1px solid rgb(95, 19, 19);
+    color: rgb(95, 19, 19);
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     opacity: 0;
     transition: opacity 0.3s ease;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 200;
   }
   
   .imageContainer:hover .image {
-    opacity: 0.6;
+    opacity: 0.9;
   }
   
   .imageContainer:hover .button {

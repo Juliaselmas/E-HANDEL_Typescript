@@ -1,24 +1,28 @@
 .itemDetailsCard {
-    max-width: 85rem;
+    background-color: #efefe680;
+    max-width: 80rem;
     margin: 50px auto;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(44, 48, 44, 0.2);
     text-align: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
   }
   
   .itemImage {
-    max-width: 35%;
+    min-width: 35%;
+    max-width: 40%;
     height: auto;
     border-radius: 10px;
   }
 
   .textBox {
-    max-width: 45%;
-    margin: 1.5rem 1rem;
+    min-width: 45%;
+    max-width: 40%;
+    padding: 1.5rem;
+    margin: 1.5rem 1.5rem;
     display:flex;
     flex-direction: column;
     align-items: flex-start;
@@ -30,6 +34,7 @@
   .textBox h3 {
     margin-top: 15px;
     font-size: 2rem;
+    color:rgb(95, 19, 19);
   }
   
   .textBox p {
@@ -43,8 +48,15 @@
     margin-top: 10px;
     font-size: 1.6rem;
   }
+
+  .stock {
+    font-weight: 800;
+    color: rgb(56, 67, 57);
+  }
   
   button {
     align-self: flex-end;
-    background-color: rgb(69, 88, 75);
+    background-color: #efeee4b2;
+    border: 1px solid rgb(56, 67, 57);
+    color: rgb(56, 67, 57);
   }

@@ -1,7 +1,7 @@
 import { ItemModel } from "./ItemModel";
 
 export interface ItemDetailsModel extends ItemModel {
-    backgroundImage: string,
+    secondImage: string,
     description: string,
     quantity: number  
 }
